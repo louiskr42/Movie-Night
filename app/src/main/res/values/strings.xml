@@ -1,0 +1,17 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Movie Night</string>
+    
+    <string-array name="sorting">
+        <item>Popularity descending</item>
+        <item>Popularity ascending</item>
+        <item>Release date descending</item>
+        <item>Release date ascending</item>
+        <item>Revenue descending</item>
+        <item>Revenue ascending</item>
+        <item>Average vote descending</item>
+        <item>Average vote ascending</item>
+        <item>Number of votes descending</item>
+        <item>Numver of votes ascending</item>
+    </string-array>
+
+</resources>

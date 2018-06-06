@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    tools:context=".MainActivity"
+    android:background="#e4e4e4">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        app:layout_constraintTop_toBottomOf="@+id/genreTextView"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteX="5dp">
+
+        <Spinner
+            android:id="@+id/minDaySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/minYearEditText"
+            app:layout_constraintTop_toBottomOf="@+id/sortSpinner"/>
+
+        <Spinner
+            android:id="@+id/minMonthSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/minDaySpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortSpinner"/>
+
+        <Spinner
+            android:id="@+id/maxDaySpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/maxYearEditText"
+            app:layout_constraintTop_toBottomOf="@+id/minDaySpinner"/>
+
+        <Spinner
+            android:id="@+id/maxMonthSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@+id/minMonthSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/minMonthSpinner"/>
+
+        <EditText
+            android:id="@+id/voteCountEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Min Amount Of Votes"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/voteAverageEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/maxYearEditText"/>
+
+        <EditText
+            android:id="@+id/voteAverageEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Min Average Rating"
+            android:inputType="numberDecimal"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/voteCountEditText"
+            app:layout_constraintTop_toBottomOf="@+id/maxYearEditText"/>
+
+
+        <EditText
+            android:id="@+id/minYearEditText"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:hint="Min Year"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sortSpinner"/>
+
+        <EditText
+            android:id="@+id/maxYearEditText"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Max Year"
+            android:inputType="number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minYearEditText"/>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:text="Month:"
+            app:layout_constraintEnd_toStartOf="@+id/minMonthSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minMonthSpinner"/>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:text="Day:"
+            app:layout_constraintEnd_toStartOf="@+id/minDaySpinner"
+            app:layout_constraintTop_toBottomOf="@+id/minDaySpinner"/>
+
+        <Spinner
+            android:id="@+id/sortSpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/genreButton"/>
+
+        <Button
+            android:id="@+id/genreButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#e4e4e4"
+            android:text="Select Genres"
+            android:textColor="#42b0f4"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/noResultsTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="No results found"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/resultRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/resultRecyclerView"
+        app:layout_constraintStart_toStartOf="@+id/resultRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/resultRecyclerView"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/resultRecyclerView"
+        app:layout_constraintEnd_toEndOf="@+id/noResultsTextView"
+        app:layout_constraintStart_toStartOf="@+id/noResultsTextView"
+        app:layout_constraintTop_toTopOf="@+id/resultRecyclerView"/>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:text="Search"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/resultRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:checkedButton="@+id/movieButton"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <RadioButton
+            android:id="@+id/movieButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Movies"/>
+
+        <RadioButton
+            android:id="@+id/tvButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TV Shows"/>
+
+        <RadioButton
+            android:id="@+id/bothButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Movies + TV"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/genreTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Selected Genres:"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</android.support.constraint.ConstraintLayout>
