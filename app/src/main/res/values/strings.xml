@@ -1,5 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Movie Night</string>
+    <string name="powered_by_tmdb"><a href="https://www.themoviedb.org/">This product uses the TMDb API but is not endorsed or certified by TMDb.</a></string>
     
     <string-array name="sorting">
         <item>Popularity descending</item>
