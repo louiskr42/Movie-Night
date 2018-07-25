@@ -201,6 +201,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         maxDSP.setAdapter(dayAD);
         maxMSP.setAdapter(monthAD);
 
+        callGenres();
 
     }
 
@@ -785,7 +786,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 if (genreAD.getCount() == 0) {
                     callGenres();
-                    Toast.makeText(this, "Loading Genres, please wait a moment.", Toast.LENGTH_SHORT).show();
+                    if (genreAD.getCount() != 0) {
+                        genreDialog();
+                    } else {
+                        Toast.makeText(this, "Loading Genres, please try again.", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     genreDialog();
                 }
